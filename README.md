@@ -1,7 +1,7 @@
 # Scraping Whoscored Event Data
 ![alt text](https://github.com/Stat-Peekers/Scrape-Whoscored-Event-Data/blob/main/logo.jpg "Whoscored")
 
-Now you can get **FREE!!** match event data from [Whoscored](http://whoscored.com/ "Whoscored")'s chalkboard using **Selenium**. 
+Get match event data from [Whoscored](http://whoscored.com/ "Whoscored") 
 
 Pre-requisites:
 1. **Clone repository**
