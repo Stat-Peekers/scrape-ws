@@ -1,11 +1,12 @@
-# Scraping Whoscored Event Data
+# Scraping WS Event Data
 ![alt text](https://github.com/Stat-Peekers/Scrape-Whoscored-Event-Data/blob/main/logo.jpg "Whoscored")
 
 Get match event data from [Whoscored](http://whoscored.com/ "Whoscored") 
 
-Pre-requisites:
-1. **Clone repository**
-   1. Clone this repo in your local system -> [How to?](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+**Pre-requisites**
+==================
+1. **Clone repository** \
+    Clone this repo in your local system -> [How to?](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 2. **Work in a conda / python environment**\
    (Proceed to Step 3 if you don't want to work in an environment)
    1. _Preferred_ -> Create a new python environment
@@ -24,23 +25,30 @@ Pre-requisites:
       2. Download driver
          1. [Download from here](https://chromedriver.chromium.org/downloads)
          2. Choose the one that matches your current version as obtained in step `i`
-         3. A zip file will be downloaded. Extract the file inside it into the cloned local folder.\
+         3. A zip file will be downloaded. Extract the file inside it into the cloned local folder.
 
-      NOTE: If you use any other browser than chrome, kindly go through [this](https://selenium-python.readthedocs.io/installation.html#drivers) and you will also have to change the code accordingly. I will be doing this in future updates
+      _NOTE: If you use any other browser than chrome, kindly go through [this](https://selenium-python.readthedocs.io/installation.html#drivers) and you will also have to change the code accordingly. I will be doing this in future updates_
    
 
-To get the data:
-1. Data for one match: 
+**Get the data**
+================
+1. Data for one match
    1. Get the match url from [Whoscored](http://whoscored.com/ "Whoscored")
    2. Run file: `single_match_scrape.py`
    3. Enter the url for data from the desired match as obtained in Step `i`
-2. Data for a tournament in a particular season:
+2. Data for a tournament in a particular season
    - Run file: `all_matches_in_comp.py`
    - Select desired tournament and season
    - Sit back and let the code do the work for you :smiley:
+   
+**Data Storage**
+================
+1. Data will be stored in a local folder created automatically with well-structured sub-folders for every tournament, season and level of data
+2. Every file will be in the form of <match_id>.json
 
-Reach me [here](https://twitter.com/StatPeekers) for any kind of help :) 
-
-CREDITS:
+**CREDITS**
+===========
 Code is adapted from [Ali Hasan Khan](https://github.com/Ali-Hasan-Khan/Scrape-Whoscored-Event-Data) ([Reach out here](https://twitter.com/rockingAli5)) \
 LICENCE: Original licence is also preserved / maintained as developed by [Ali Hasan Khan](https://github.com/Ali-Hasan-Khan/Scrape-Whoscored-Event-Data)
+
+Reach me [here](https://twitter.com/StatPeekers) for any kind of help / queries :) 
