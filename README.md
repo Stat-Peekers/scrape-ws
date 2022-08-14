@@ -15,7 +15,7 @@ Pre-requisites:
    1. Using Anaconda prompt / terminal
       1. Open Anaconda prompt / terminal
       2. Go to local folder where cloned/downloaded repository
-      4. Run this code `pip install -r requirements.txt`\
+      4. Run this code `pip install -r requirements.txt`
 4. **Driver for chrome**
    1. Check browser version
       1. Open Chrome
