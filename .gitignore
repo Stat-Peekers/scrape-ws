@@ -1,5 +1,6 @@
-# Data folder
+# Folders
 data/
+non_scrape_src/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

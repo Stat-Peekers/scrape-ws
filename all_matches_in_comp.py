@@ -25,18 +25,22 @@ if __name__ == "__main__":
     league_urls = get_league_urls()
 
     # Select comp and season:
-    tournaments_list = [
-        "Premier League",
-        "Champions League",
-        "Ligue 1",
-        "LaLiga",
-        "Bundesliga",
-        "Serie A"
-    ]
+    tournaments_list = list(league_urls.keys())
+    # tournaments_list = [
+    #     "Premier League",
+    #     "Champions League",
+    #     "Ligue 1",
+    #     "LaLiga",
+    #     "Bundesliga",
+    #     "2. Bundesliga",
+    #     "Serie A",
+    #     "Eredivisie"
+    # ]
     season_list = [
         "2020/2021",
         "2021/2022",
-        "2022/2023"
+        "2022/2023",
+        "2023/2024"
     ]
     # NOTE: You can add tournaments and seasons above as you want according to the WS website
 
@@ -78,7 +82,7 @@ if __name__ == "__main__":
 
     main_url = 'https://1xbet.whoscored.com/'
 
-    for m_url in match_urls:
+    for m_url in match_urls[0:]:
         match_url = m_url["url"]
         m_id = re.findall('[0-9]+', match_url)[0]
         if m_id not in existing_match_ids:

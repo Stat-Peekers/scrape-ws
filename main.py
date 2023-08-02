@@ -52,6 +52,7 @@ main_url = 'https://1xbet.whoscored.com/'
 
 def get_league_urls(minimize_window=True):
     driver = webdriver.Chrome('chromedriver.exe')
+    # driver = webdriver.Firefox()
 
     if minimize_window:
         driver.minimize_window()
@@ -85,6 +86,7 @@ def get_league_urls(minimize_window=True):
 
 def get_match_urls(comp_urls, competition, season, maximize_window=True):
     driver = webdriver.Chrome('chromedriver.exe')
+    # driver = webdriver.Firefox()
 
     if maximize_window:
         driver.maximize_window()
@@ -164,7 +166,10 @@ def get_match_urls(comp_urls, competition, season, maximize_window=True):
                 all_urls = []
 
                 driver.execute_script("window.scrollTo(0, 400)")
-
+                try:
+                    driver.find_element(By.XPATH, '//*[@id="qc-cmp2-ui"]/div[2]/div/button[2]').click()
+                except:
+                    pass
                 match_urls = get_fixture_data(driver)
 
                 match_urls = get_sorted_data(match_urls)
@@ -209,7 +214,10 @@ def get_fixture_data(driver):
                 match_dict['score'] = element.find("a", {"class": "result-1 rc"}).text
                 match_dict['url'] = link_tag.get("href")
             matches_ls.append(match_dict)
-
+        try:
+            driver.find_element(By.XPATH, '//*[@id="qc-cmp2-ui"]/div[2]/div/button[2]').click()
+        except NoSuchElementException:
+            pass
         _ = driver.find_element("xpath", '//*[@id="date-controller"]/a[1]').click()
         time.sleep(2)
         if driver.find_element("xpath", '//*[@id="date-controller"]/a[1]').get_attribute('title') == 'No data for previous week':

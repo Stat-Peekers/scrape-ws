@@ -11,13 +11,28 @@ import os
 import json
 import main
 from selenium import webdriver
-
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 
 def single_match_data(url):
     """
     Get data for a single match
     """
+    # options = Options()
+    # options.add_argument('--ignore-certificate-errors')
+    #add user Agent
+    # options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    # +"AppleWebKit/537.36 (KHTML, like Gecko)"
+    # +"Chrome/114.0.5735.199 Safari/537.36")
+    # service = Service('chromedriver.exe')
+
+    # service.start()
+
+    # driver = webdriver.Firefox()
+
     driver = webdriver.Chrome('chromedriver.exe')
+    driver.get(url)
+
 
     # Data containing all the info about the match
     all_match_data = main.get_match_data(driver, url, close_window=True)
